@@ -22,7 +22,7 @@ Wire up Temporal using `UseTemporal`.
 
 Now, to enable individual time travel replace usages of `DateTime.Now` and `DateTime.UtcNow` with `TemporalClock.Now` and `TemporalClock.UtcNow`, respectively. **Any time freeze requested is scoped to that user only.** When a user freezes time, a session cookie is used to store where that user is in *time*.
 
-**Note:** Requests, including client-side requests, should include the `CookieTimeProvider` cookie (`__TemporalTime`) to take advantage of time freezing. Otherwise, the current time may be used expectedly.
+**Note:** Requests, including client-side requests, should include the `CookieTimeProvider` cookie (`__TemporalTime`) to take advantage of time freezing. Otherwise, the current time may be used unexpectedly.
 
 ## Implementation notes
 
